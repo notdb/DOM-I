@@ -45,25 +45,44 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //nav buttons
 
 let nav = document.querySelector('nav');
+let navColor = document.querySelectorAll('nav a');
+
+let newNavOne = document.createElement('a');
+newNavOne.textContent = 'Something';
+
+let newNavTwo = document.createElement('a');
+newNavTwo.textContent = 'Something 2';
+
+newNavTwo.setAttribute('style', 'padding-right: 1em;');
+nav.appendChild(newNavOne);
+
+
 
 let navItem1 = document.querySelector('nav a:nth-child(1)');
 navItem1.textContent = siteContent['nav']['nav-item-1'];
+navItem1.style.color = 'green';
+
+navItem1.prepend(newNavTwo);
 
 let navItem2 = document.querySelector('nav a:nth-child(2)');
 navItem2.textContent = siteContent['nav']['nav-item-2'];
+navItem2.setAttribute('style', 'color: green;')
 
 let navItem3 = document.querySelector('nav a:nth-child(3)');
 navItem3.textContent = siteContent['nav']['nav-item-3'];
+navItem3.setAttribute('style', 'color: green;')
 
 let navItem4 = document.querySelector('nav a:nth-child(4)');
 navItem4.textContent = siteContent['nav']['nav-item-4'];
+navItem4.setAttribute('style', 'color: green;')
 
 let navItem5 = document.querySelector('nav a:nth-child(5)');
 navItem5.textContent = siteContent['nav']['nav-item-5'];
+navItem5.setAttribute('style', 'color: green;')
 
 let navItem6 = document.querySelector('nav a:nth-child(6)');
 navItem6.textContent = siteContent['nav']['nav-item-6'];
-
+navItem6.setAttribute('style', 'color: green;')
 
 // cta buttons
 
