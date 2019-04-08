@@ -37,6 +37,8 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -91,6 +93,14 @@ ctaText.textContent = siteContent['cta']['h1'];
 
 let ctaButtonText = document.querySelector('.cta-text button');
 ctaButtonText.textContent = siteContent['cta']['button'];
+
+ctaButtonText.addEventListener('click', yourFunction);
+
+function yourFunction() {
+  navItem5.setAttribute('style', 'color: red;')
+}
+
+
 
 // cta image
 
@@ -158,10 +168,18 @@ contactHeader.textContent = siteContent['contact']['contact-h4'];
 
 let selectParagraphs = document.querySelectorAll('.contact p');
 
-selectParagraphs[0].textContent = siteContent['contact']['address'];
+
 
 selectParagraphs[1].textContent = siteContent['contact']['phone'];
 
+let newString = siteContent['contact']['address'];
+let newString1 = newString.slice(0, 18);
+let newString2 = newString.slice(18, 32);
+let brElement = document.createElement('br');
+console.log(newString1);
+console.log(newString2);
+
+selectParagraphs[0].textContent = siteContent['contact']['address'];
 selectParagraphs[2].textContent = siteContent['contact']['email'];
 
 
